@@ -11,9 +11,19 @@
 //iteratee is a function that must return something, capture whatever it returns in a variable
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
-function map(array, iteratee){
-
+let mapArr = [1, 2, 3, 4, 5];
+let newArr = [];
+function map(){
+    for (let i = 0; i < mapArr.length; i++) {
+        //console.log(mapArr[i]);
+        newArr.push(mapArr[i] * 3);
+    }
+    console.log(newArr);
 }
+map();
+
+let mapMap = mapArr.map(num => num * 2);
+console.log(mapMap);
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 //create a function called `filter`, it should take 2 parameters `array` and `iteratee`
