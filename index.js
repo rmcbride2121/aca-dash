@@ -34,9 +34,21 @@ console.log(mapMap);
 //     passing in the item from the current loop
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
-function filter(array, iteratee){
-
+let filterArr = [1, 2, 3, 4, 5];
+let newFilterArr = [];
+function filter(){
+    for (let i = 0; i < filterArr.length; i++) {
+        //console.log(filterArr[i]);
+        if (filterArr[i] > 2) {
+            newFilterArr.push(filterArr[i]);
+        }
+    }
+    console.log(newFilterArr);
 }
+filter()
+
+let filterFilter = filterArr.filter(num => num > 2);
+console.log(filterFilter);
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 //create a function called `find`, it should take 2 parameters `theArray` and `fnc`
@@ -44,10 +56,21 @@ function filter(array, iteratee){
 //     passing in the item from the current loop
 //fnc will return true or false, if true return the item 
 //after looping, return null
-function find(theArray, fnc){
-
+let findArr = [1, 2, 3, 4, 5];
+let newFindArr = [];
+let findNum = 3;
+function find(){
+    for (let i = 0; i < findArr.length; i++) {
+        if (findArr[i] == findNum) {
+            newFindArr.push(findArr[i]);
+        }
+    }
+    console.log(newFindArr);
 }
+find()
 
+let findFind = findArr.find(num => num == findNum);
+console.log(findFind)
 
 //return the last item in theArray
 function findLast(theArray){
