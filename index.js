@@ -13,16 +13,19 @@
 //after looping, return  myNewArray
 let mapArr = [1, 2, 3, 4, 5];
 let newArr = [];
+
 function map(){
     for (let i = 0; i < mapArr.length; i++) {
         //console.log(mapArr[i]);
         newArr.push(mapArr[i] * 3);
     }
+    console.log("map 1:");
     console.log(newArr);
 }
 map();
 
 let mapMap = mapArr.map(num => num * 2);
+console.log("map 2:");
 console.log(mapMap);
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -36,6 +39,7 @@ console.log(mapMap);
 //after looping, return myNewArray
 let filterArr = [1, 2, 3, 4, 5];
 let newFilterArr = [];
+
 function filter(){
     for (let i = 0; i < filterArr.length; i++) {
         //console.log(filterArr[i]);
@@ -43,11 +47,13 @@ function filter(){
             newFilterArr.push(filterArr[i]);
         }
     }
+    console.log("filter 1:");
     console.log(newFilterArr);
 }
 filter()
 
 let filterFilter = filterArr.filter(num => num > 2);
+console.log("filter 2:");
 console.log(filterFilter);
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -59,28 +65,42 @@ console.log(filterFilter);
 let findArr = [1, 2, 3, 4, 5];
 let newFindArr = [];
 let findNum = 3;
+
 function find(){
     for (let i = 0; i < findArr.length; i++) {
         if (findArr[i] == findNum) {
             newFindArr.push(findArr[i]);
         }
     }
+    console.log("find 1:");
     console.log(newFindArr);
 }
 find()
 
 let findFind = findArr.find(num => num == findNum);
+console.log("find 2:");
 console.log(findFind)
 
 //return the last item in theArray
-function findLast(theArray){
+let findLastArr = [1, 2, 3, 4, 5];
+let newFindLastArr = [];
 
+function findLast(){
+    newFindLastArr = findLastArr.slice(-1).pop();
+    console.log("findLast 1:");
+    console.log(newFindLastArr);
 }
+findLast()
 
 //return the first element of the array
-function head(theArray){
-
+let headArr = [1, 2, 3, 4, 5];
+let newHeadArr = [];
+function head(){
+    newHeadArr = headArr.shift();
+    console.log("findFirst 1:");
+    console.log(newHeadArr);
 }
+head()
 
 //create a new array
 //loop theArray in reverse order
