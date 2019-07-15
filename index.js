@@ -106,17 +106,30 @@ head()
 //loop theArray in reverse order
 //add the item from each loop to the new array
 //return the new array
-function reverse(theArray){
-
+let reverseArr = [1, 2, 3, 4, 5];
+let newReverseArr = [];
+function reverse(){
+    for (let i = reverseArr.length - 1; i >= 0; i--) {
+        newReverseArr.push(reverseArr[i]);
+    }
+    console.log(newReverseArr);
 }
+reverse()
 
 //create a new array
 //loop theArray
 //add the item from each loop to the new array except the first item
 //return the new array
-function tail(theArray){
-
+let tailArr = [1, 2, 3, 4, 5];
+let newTailArr = [];
+function tail(){
+    let firstItem = tailArr.shift();
+    for (let i = 0; i < tailArr.length; i++) {
+        newTailArr.push(tailArr[i]);
+    }
+    console.log(newTailArr);
 }
+tail()
 
 //implement the most basic sorting algorithm there is
 //assume the array will always have numbers
