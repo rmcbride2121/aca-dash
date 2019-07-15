@@ -95,6 +95,7 @@ findLast()
 //return the first element of the array
 let headArr = [1, 2, 3, 4, 5];
 let newHeadArr = [];
+
 function head(){
     newHeadArr = headArr.shift();
     console.log("findFirst 1:");
@@ -108,6 +109,7 @@ head()
 //return the new array
 let reverseArr = [1, 2, 3, 4, 5];
 let newReverseArr = [];
+
 function reverse(){
     for (let i = reverseArr.length - 1; i >= 0; i--) {
         newReverseArr.push(reverseArr[i]);
@@ -122,6 +124,7 @@ reverse()
 //return the new array
 let tailArr = [1, 2, 3, 4, 5];
 let newTailArr = [];
+
 function tail(){
     let firstItem = tailArr.shift();
     for (let i = 0; i < tailArr.length; i++) {
@@ -141,8 +144,18 @@ tail()
 //if a swap is done set it to true
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
-function sort(theArray){
+let sortArr = [1, 2, 3, 4, 5];
+let newSortArr = [];
 
+function sort(){
+    const myCustomSortFunction = ( callback ) {
+        const newArray = [];
+    
+        for (let i = 0; i < this.length; i++) {
+            console.log(this[i]);
+        }
+    }
+    Array.prototype.filter = myCustomMapFunction;
 }
 
 exports.map = map;
